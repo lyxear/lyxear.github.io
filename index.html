@@ -33,7 +33,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '610249810';
+    var serviceWorkerVersion = '801087258';
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -70,6 +70,9 @@
 </div>
 
 <script>
+    caches.delete('flutter-app-manifest');
+    caches.delete('flutter-temp-cache');
+    caches.delete('flutter-app-cache');
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
